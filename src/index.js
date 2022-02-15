@@ -228,6 +228,7 @@ walletRouter.use((req, res, next) => {
   }
 
   const walletId = req.headers['x-wallet-id'];
+  console.log(walletId);
   if (!(walletId in wallets)) {
     sendError('Invalid wallet id parameter.');
     return;
